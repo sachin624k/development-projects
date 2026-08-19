@@ -791,7 +791,7 @@ The exact internal order evolved while building, since features were implemented
 
 ---
 
-## 🎯 Purpose of the Project
+## Purpose of the Project
 
 FinanceFlow is not intended to be a large financial SaaS.
 
