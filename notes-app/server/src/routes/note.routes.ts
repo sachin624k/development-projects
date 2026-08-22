@@ -1,34 +1,18 @@
 import express from "express";
-import { Note } from "../models/note.model.js";
+import {
+  deleteNote,
+  getNotes,
+  getNotesById,
+  postNotes,
+  updateNotesById,
+} from "../controllers/note.controller.js";
 
 const router = express.Router();
 
-router.get("/", async (_req, res) => {
-  try {
-    const notes = await Note.find().sort({ createdAt: -1 });
-    res.json(notes);
-  } catch (error) {
-    res.status(500).json({
-      message: "Failed to fetch notes",
-    });
-  }
-});
-
-router.post("/", async (req, res) => {
-  try {
-    const { title, content } = req.body;
-
-    const note = await Note.create({
-      title,
-      content,
-    });
-
-    res.status(201).json(note);
-  } catch (error) {
-    res.status(500).json({
-      message: "Failed to create a note",
-    });
-  }
-});
+router.get("/", getNotes);
+router.post("/", postNotes);
+router.get("/:id", getNotesById);
+router.patch("/:id", updateNotesById);
+router.delete("/:id", deleteNote);
 
 export default router;
