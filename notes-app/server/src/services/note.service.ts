@@ -18,7 +18,7 @@ export const getNoteById = async (id: string) => {
   return note;
 };
 
-export const updateNote = async (
+export const updateNoteById = async (
   id: string,
   title: string,
   content: string,
@@ -26,12 +26,12 @@ export const updateNote = async (
   const note = await Note.findByIdAndUpdate(
     id,
     { title, content },
-    { new: true, runValidators: true },
+    { returnDocument: "after", runValidators: true },
   );
   return note;
 };
 
-export const deleteNotes = async (id: string) => {
+export const deleteNoteById = async (id: string) => {
   const note = await Note.findByIdAndDelete(id);
   return note
 };

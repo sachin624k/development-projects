@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
 import {
   createNote,
-  deleteNotes,
+  deleteNoteById,
   getAllNotes,
   getNoteById,
-  updateNote,
+  updateNoteById,
 } from "../services/note.service.js";
 
 export const getNotes = async (req: Request, res: Response) => {
@@ -59,7 +59,7 @@ export const updateNotesById = async (
   try {
     const { title, content } = req.body;
 
-    const note = await updateNote(req.params.id, title, content);
+    const note = await updateNoteById(req.params.id, title, content);
     if (!note) {
       return res.status(404).json({
         message: "Note not found",
@@ -73,13 +73,13 @@ export const updateNotesById = async (
   }
 };
 
-export const deleteNote = async (
+export const deleteNotesById = async (
   req: Request<{ id: string }>,
   res: Response,
 ) => {
   try {
     // const { id } = req.params;
-    const deletedNote = await deleteNotes(req.params.id);
+    const deletedNote = await deleteNoteById(req.params.id);
     if (!deletedNote) {
       return res.status(404).json({
         message: "Note not found",

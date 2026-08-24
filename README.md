@@ -1,6 +1,6 @@
 # Projects
 
-A collection of practical projects are going to build while learning and strengthening **Full Stack Development**.
+A collection of practical projects built while learning and strengthening **Full Stack Development**.
 
 Each project focuses on applying concepts through hands-on development rather than only theory.
 
@@ -8,10 +8,11 @@ Each project focuses on applying concepts through hands-on development rather th
 
 ## Projects
 
-| #   | Project                       | Tech Used                         | Focus                    |
-| --- | ----------------------------- | --------------------------------- | ------------------------ |
-| 01  | [FinanceFlow](/finance-flow/README.md) | React + TypeScript + Tailwind CSS | Expense & Income Tracker |
-| 02  | Coming Soon                   | —                                 | —                        |
+| #   | Project                                | Tech Used                                        | Focus                    |
+| --- | -------------------------------------- | ------------------------------------------------ | ------------------------ |
+| 01  | [FinanceFlow](/finance-flow/README.md) | React + TypeScript + Tailwind CSS                | Expense & Income Tracker |
+| 02  | [Notes App](/notes-app/README.md)      | React + TypeScript + Node.js + Express + MongoDB | Full Stack Notes Manager |
+| 03  | Coming Soon                            | —                                                | —                        |
 
 ---
 
@@ -19,7 +20,8 @@ Each project focuses on applying concepts through hands-on development rather th
 
 ```
 Projects/
-└── finance-flow/
+├── finance-flow/
+└── notes-app/
 ```
 
 ---
